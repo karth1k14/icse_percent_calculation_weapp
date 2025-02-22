@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICSE Marksheet Percentage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>ICSE Marksheet Percentage Calculator</h1>
+
+        <!-- Manual Entry Section -->
+        <div class="manual-entry">
+            <h2>Enter Marks Manually</h2>
+            
+            <label for="english">English (Compulsory):</label>
+            <input type="number" id="english" min="0" max="100">
+
+            <label for="language">Language:</label>
+            <input type="number" id="language" min="0" max="100">
+
+            <label for="history">History & Geography:</label>
+            <input type="number" id="history" min="0" max="100">
+
+            <label for="science">Science:</label>
+            <input type="number" id="science" min="0" max="100">
+
+            <label for="maths">Mathematics:</label>
+            <input type="number" id="maths" min="0" max="100">
+
+            <label for="optional">Optional Subject:</label>
+            <input type="number" id="optional" min="0" max="100">
+
+            <button onclick="calculatePercentage()">Calculate Percentage</button>
+            <button class="reset" onclick="resetForm()">Reset</button>
+            
+            <h3 id="result"></h3>
+        </div>
+
+        <!-- Upload Section -->
+        <!-- Upload Section -->
+<div class="upload-section">
+    <h2>Upload Marksheet</h2>
+    <input type="file" id="marksheetUpload" accept="image/*">
+    <button onclick="extractMarksFromImage()">Extract & Calculate</button>
+    
+    <h3 id="ocrResult"></h3>
+
+    <!-- Developed by Karthik -->
+    <p class="developer-credit">
+        Developed by <a href="https://www.linkedin.com/in/karthik-sai-654817257/" target="_blank">Karthik sai Ambati</a>
+    </p>
+</div>
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
+    <script src="script.js"></script>
+<!-- Percentage Calculation Explanation -->
+<div class="calculation-info">
+    <h3>How is the Percentage Calculated?</h3>
+    <p>
+        The percentage is calculated based on the **best 5 subjects out of 6**, with **English being compulsory**. 
+        The total marks of the top 5 subjects are summed and then divided by 5 to get the final percentage.
+    </p>
+
+    <!-- ICSE Official Website Link -->
+    <p>For more details, visit the <a href="https://www.cisce.org" target="_blank">ICSE Official Website</a>.</p>
+</div>
+
+</body>
+</html>
